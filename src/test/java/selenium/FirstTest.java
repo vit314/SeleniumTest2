@@ -23,18 +23,17 @@ public class FirstTest {
         driver.get("https://www.onliner.by/");
         Thread.sleep(3000);
 
-//        WebElement element = driver.findElement(By.name("query"));
+        WebElement element = driver.findElement(By.name("query"));
 
-//        element.sendKeys("вентилятор");
-//        Thread.sleep(3000);
-//        element.submit();
+        element.sendKeys("вентилятор");
+        Thread.sleep(3000);
+        element.submit();
 
         Thread.sleep(3000);
         WebElement vent = driver.findElement(By.xpath("//h2/a[contains(.,'Кошелек')]"));
         vent.click();
 
         System.out.println(driver.getTitle());
-//        driver.quit();
+        driver.quit();
     }
-
 }
