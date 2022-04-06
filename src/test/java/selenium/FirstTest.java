@@ -11,7 +11,7 @@ import java.time.Duration;
 public class FirstTest {
 
     @Test
-    public void firstTestSelenium() throws InterruptedException {
+    public void firstTest() throws InterruptedException {
 
         System.setProperty("webdriver.chrome.driver", "D:/Automated Testing/chromedriver.exe");
 
