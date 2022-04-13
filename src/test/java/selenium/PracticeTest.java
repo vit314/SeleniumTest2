@@ -11,10 +11,13 @@ import java.time.Duration;
 
 public class PracticeTest {
 
+    String homePath = "C:/selenium/chromedriver.exe";
+    String workPath = "D:/Automated Testing/chromedriver.exe";
+
     @Test
     public void practiceTest() throws InterruptedException {
 
-        System.setProperty("webdriver.chrome.driver", "D:/Automated Testing/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", homePath);
 
         WebDriver driver = new ChromeDriver();
 
