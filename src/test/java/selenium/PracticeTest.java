@@ -41,7 +41,6 @@ public class PracticeTest extends Base {
 //        submit.click();
 //        Thread.sleep(3000);
 
-//        driver.quit();
 
     }
 }

@@ -13,7 +13,7 @@ import java.time.Duration;
 public class SauceDemoNegativeTest extends Base {
 
     @Test
-    public void SauceDemoNegativeTest() throws InterruptedException {
+    public void sauceDemoNegativeTest() throws InterruptedException {
 
          // НАЧАЛО ТЕСТА
         driver.get("https://www.saucedemo.com/");
