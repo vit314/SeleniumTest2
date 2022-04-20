@@ -13,7 +13,7 @@ public class SauceDemoPositiveLoginTest extends Base {
 
          // НАЧАЛО ТЕСТА
         driver.get("https://www.saucedemo.com/");
-        Thread.sleep(3000);
+        Thread.sleep(1000);
 
         checkTitle();
 
