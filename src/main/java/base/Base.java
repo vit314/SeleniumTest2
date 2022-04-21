@@ -29,14 +29,12 @@ public class Base {
         driver.quit();
     }
 
+    //ПРОВЕРКА ЧТО ОТКРЫЛАСЬ НУЖНАЯ СТРАНИЦА
     public void checkTitle() {
-        //ПРОВЕРКА ЧТО ОТКРЫЛАСЬ НУЖНАЯ СТРАНИЦА
         String titleActual = driver.getTitle();
         String titleExpected = "Swag Labs";
 
         Assert.assertEquals(titleActual, titleExpected);
         System.out.println("Заголовок страницы проверен");
-
     }
-
 }
