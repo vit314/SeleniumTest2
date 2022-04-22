@@ -11,7 +11,7 @@ public class SauceDemoPositiveLoginTest extends Base {
     @Test
     public void sauceDemoPositiveLoginTest() throws InterruptedException {
 
-         // НАЧАЛО ТЕСТА
+        // НАЧАЛО ТЕСТА
         driver.get("https://www.saucedemo.com/");
         Thread.sleep(1000);
 
