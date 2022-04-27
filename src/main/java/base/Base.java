@@ -19,7 +19,7 @@ public class Base {
 
     @BeforeTest
     public void initializeDriver() {
-        System.setProperty("webdriver.chrome.driver", workPath);
+        System.setProperty("webdriver.chrome.driver", homePath);
         driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
