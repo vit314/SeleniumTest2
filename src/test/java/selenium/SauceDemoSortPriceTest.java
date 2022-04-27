@@ -15,12 +15,13 @@ public class SauceDemoSortPriceTest extends Base {
 
         login();
 
-        Thread.sleep(2000);
+        Thread.sleep(20000);
 
-        WebElement sort = driver.findElement(By.xpath("driver.findElement(By.xpath(\"//select[contains(@class,'sort')]"));
+
+        WebElement sort = driver.findElement(By.xpath("//span[@class='select_container']"));
         sort.click();
 
-        Select sortDropdown = new Select(driver.findElement(By.xpath("//select[contains(@class,'sort')]")));
+        Select sortDropdown = new Select(driver.findElement(By.xpath("//span[@class='active_option']")));
         sortDropdown.selectByValue("lohi");
 
     }
