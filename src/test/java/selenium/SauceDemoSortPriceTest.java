@@ -3,6 +3,7 @@ package selenium;
 import base.Base;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.openqa.selenium.support.ui.Select;
 
@@ -21,5 +22,7 @@ public class SauceDemoSortPriceTest extends Base {
         sortDropdown.click();
 
         //НУЖНО ДОБАВИТЬ АССЕРТ, ВКЛЮЧАЮЩИЙ ARRAYLIST
+
+        Assert.assertEquals(getPriceItemsFromPage(), sortPriceLowToHigh());
     }
 }
