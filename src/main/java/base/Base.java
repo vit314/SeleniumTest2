@@ -68,6 +68,8 @@ public class Base {
         checkTitle();
     }
 
+    //ASSERT SORTING PRICES
+
     public ArrayList<Double> getPriceItemsFromPage() {
         List<WebElement> priceItems = driver.findElements(itemsPrice);
         ArrayList<Double> price = new ArrayList<>();
