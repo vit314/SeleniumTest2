@@ -9,6 +9,9 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 
 public class Base {
 
@@ -28,7 +31,7 @@ public class Base {
 
     @AfterTest
     public void endTest() {
-//        driver.quit();
+        driver.quit();
     }
 
     //ПРОВЕРКА ЧТО ОТКРЫЛАСЬ НУЖНАЯ СТРАНИЦА
@@ -63,6 +66,29 @@ public class Base {
         Thread.sleep(1000);
 
         checkTitle();
+    }
+
+    //ASSERT SORTING PRICES
+
+    public ArrayList<Double> getPriceItemsFromPage() {
+        List<WebElement> priceItems = driver.findElements(itemsPrice);
+        ArrayList<Double> price = new ArrayList<>();
+        for (int i = 0; i < priceItems.size(); i++) {
+            price.add(Double.parseDouble(priceItems.get(i).getText().replace("$", "")));
+        }
+        return price;
+    }
+
+    private By itemsPrice = By.xpath("//div[@class='inventory_item_price']");
+
+    public ArrayList<Double> sortPriceLowToHigh() {
+        List<WebElement> priceItems = driver.findElements(itemsPrice);
+        ArrayList<Double> price = new ArrayList<>();
+        for (int i = 0; i < priceItems.size(); i++) {
+            price.add(Double.parseDouble(priceItems.get(i).getText().replace("$", "")));
+        }
+        price.sort(Comparator.naturalOrder());
+        return price;
     }
 
 }
