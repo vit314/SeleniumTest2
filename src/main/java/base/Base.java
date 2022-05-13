@@ -76,6 +76,7 @@ public class Base {
         for (int i = 0; i < priceItems.size(); i++) {
             price.add(Double.parseDouble(priceItems.get(i).getText().replace("$", "")));
         }
+        System.out.println(price);
         return price;
     }
 
@@ -88,6 +89,7 @@ public class Base {
             price.add(Double.parseDouble(priceItems.get(i).getText().replace("$", "")));
         }
         price.sort(Comparator.naturalOrder());
+        System.out.println(price);
         return price;
     }
 
