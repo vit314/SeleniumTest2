@@ -22,7 +22,7 @@ public class Base {
 
     @BeforeTest
     public void initializeDriver() {
-        System.setProperty("webdriver.chrome.driver", homePath);
+        System.setProperty("webdriver.chrome.driver", "/Applications/chromedriver");
         driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -67,6 +67,47 @@ public class Base {
 
         checkTitle();
     }
+
+    public void addtocart() throws InterruptedException {
+        WebElement addtocartButton = driver.findElement(By.id("add-to-cart-sauce-labs-backpack"));
+        addtocartButton.click();
+        Thread.sleep(1000);
+
+        checkTitle();
+    }
+
+    public void shoppingcart() throws InterruptedException {
+        WebElement shoppingcartButton = driver.findElement(By.id("shopping_cart_container"));
+        shoppingcartButton.click();
+        Thread.sleep(1000);
+
+        checkTitle();
+    }
+
+    public void remove() throws InterruptedException {
+        WebElement removeButton = driver.findElement(By.id("remove-sauce-labs-backpack"));
+        removeButton.click();
+        Thread.sleep(1000);
+
+        checkTitle();
+    }
+
+    public void reactburgermenu() throws InterruptedException {
+        WebElement reactburgermenuButton = driver.findElement(By.id("react-burger-menu-btn"));
+        reactburgermenuButton.click();
+        Thread.sleep(1000);
+
+        checkTitle();
+    }
+
+    public void logout() throws InterruptedException {
+        WebElement logoutButton = driver.findElement(By.id("logout_sidebar_link"));
+        logoutButton.click();
+        Thread.sleep(1000);
+
+        checkTitle();
+    }
+
 
     //ASSERT SORTING PRICES
 

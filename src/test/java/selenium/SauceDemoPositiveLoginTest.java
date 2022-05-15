@@ -11,7 +11,7 @@ public class SauceDemoPositiveLoginTest extends Base {
     @Test
     public void sauceDemoPositiveLoginTest() throws InterruptedException {
 
-    openPage();
+        openPage();
 
     login();
 
