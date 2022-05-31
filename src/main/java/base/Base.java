@@ -22,7 +22,7 @@ public class Base {
 
     @BeforeTest
     public void initializeDriver() {
-        System.setProperty("webdriver.chrome.driver", "/Applications/chromedriver");
+        System.setProperty("webdriver.chrome.driver", workPath);
         driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
