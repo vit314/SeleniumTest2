@@ -13,7 +13,7 @@ public class SauceDemoPositiveLoginTest extends Base {
 
         openPage();
 
-    login();
+        login();
 
 
     }
