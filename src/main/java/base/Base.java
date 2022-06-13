@@ -34,7 +34,7 @@ public class Base {
 
     @AfterTest
     public void endTest() {
-        driver.quit();
+//        driver.quit();
     }
 
     //ПРОВЕРКА ЧТО ОТКРЫЛАСЬ НУЖНАЯ СТРАНИЦА
@@ -72,7 +72,7 @@ public class Base {
     }
 
     public void addtocart() throws InterruptedException {
-        WebElement addtocartButton = driver.findElement(By.id("add-to-cart-sauce-labs-backpack"));
+        WebElement addtocartButton = driver.findElement(By.cssSelector(".form-control.form-text"));
         addtocartButton.click();
     }
 
@@ -89,7 +89,7 @@ public class Base {
     }
 
     public void reactburgermenu() throws InterruptedException {
-        WebElement reactburgermenuButton = driver.findElement(By.id("react-burger-menu-btn"));
+        WebElement reactburgermenuButton = driver.findElement(By.cssSelector("react-burger-menu-btn"));
         reactburgermenuButton.click();
 
     }
