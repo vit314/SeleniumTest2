@@ -22,17 +22,19 @@ public class Base {
     public static WebDriver driver;
 
     @BeforeTest
-    public void initializeDriver() {
+    public void initializeDriver() throws InterruptedException {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
+
+        openPage();
     }
 
     @AfterTest
     public void endTest() {
-        driver.quit();
+//        driver.quit();
     }
 
     //ПРОВЕРКА ЧТО ОТКРЫЛАСЬ НУЖНАЯ СТРАНИЦА
@@ -53,13 +55,13 @@ public class Base {
     }
 
     // ВВОД ЛОГИН И ПАРОЛЬ
-    public void login() throws InterruptedException {
-        WebElement userName = driver.findElement(By.id("user-name"));
-        userName.sendKeys("standard_user");
+    public void loginBase() throws InterruptedException {
+        WebElement userNameField = driver.findElement(By.id("user-name"));
+        userNameField.sendKeys("standard_user");
         Thread.sleep(1000);
 
-        WebElement password = driver.findElement(By.id("password"));
-        password.sendKeys("secret_sauce");
+        WebElement passwordField = driver.findElement(By.id("password"));
+        passwordField.sendKeys("secret_sauce");
         Thread.sleep(1000);
 
         WebElement loginButton = driver.findElement(By.id("login-button"));

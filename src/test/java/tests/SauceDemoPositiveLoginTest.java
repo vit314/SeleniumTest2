@@ -1,9 +1,6 @@
-package selenium;
+package tests;
 
 import base.Base;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class SauceDemoPositiveLoginTest extends Base {
@@ -13,8 +10,6 @@ public class SauceDemoPositiveLoginTest extends Base {
 
         openPage();
 
-        login();
-
-
+        loginBase();
     }
 }

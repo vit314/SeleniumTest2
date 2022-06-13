@@ -1,4 +1,4 @@
-package selenium;
+package tests;
 
 import base.Base;
 import org.testng.annotations.Test;
@@ -10,7 +10,7 @@ public class Sokolovskaya_HomeWork_23 extends Base {
 
         openPage();
 
-        login();
+        loginBase();
 
         addtocart();
 
