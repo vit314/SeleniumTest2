@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
-<suite name="EducationTests">
+<suite name="EducationTests" parallel="methods" thread-count="10">
 
     <test name="SauceDemoPositiveLoginTest" allow-return-values="true">
         <classes>
@@ -9,7 +9,7 @@
         </classes>
     </test>
 
-    <test name="PA_BusinessProcess_11549" allow-return-values="true">
+    <test name="YoutubeTest" allow-return-values="true">
         <classes>
             <class name="tests.YoutubeTest" />
         </classes>
